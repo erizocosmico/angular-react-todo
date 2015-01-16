@@ -26,7 +26,8 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <div id="wrap" data-ng-controller="TodoCtrl">
-
+    <todo-form data-ng-model="taskInput"></todo-form>
+    <todo-list data-tasks="tasks"></todo-list>
 </div>
 </body>
 </html>

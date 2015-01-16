@@ -1,28 +1,24 @@
 (function (window, React) {
     'use strict';
 
-    var apply = function (self, fn) {
-        self.props.scope.$apply(fn);
-    };
-
-    var updateModel = function (self, event) {
-        apply(self, function () {
-            self.props.scope.ngModel = event.target.value;
-        });
-    };
-
     window.TodoForm = React.createClass({
+        getInitialState: function () {
+            return {input: ''};
+        },
         changed: function (e) {
-            updateModel(this, e);
+            this.setState({input: e.target.value});
         },
         addTask: function () {
-            this.props.scope.addTask();
+            this.props.scope.addTask(this.state.input);
+            this.setState({input: ''}, function () {
+                this.refs.taskInput.getDOMNode().focus();
+            });
         },
         render: function () {
             return (
                 <div>
                     <h2>Add a new task</h2>
-                    <input type='text' value={this.props.scope.ngModel} onChange={this.changed} />
+                    <input type='text' ref='taskInput' value={this.state.input} onChange={this.changed} />
                     <button onClick={this.addTask}>Add</button>
                 </div>
             );
@@ -37,7 +33,7 @@
         }
     });
 
-    window.TodoListItem = React.createClass({
+    window.TodoList = React.createClass({
         render: function () {
             var tasks = this.props.tasks.map(function (task) {
                 return (
