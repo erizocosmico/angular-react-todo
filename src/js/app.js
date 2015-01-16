@@ -37,9 +37,8 @@
         return {
             restrict: 'E',
             link: function (scope, elem) {
-                var form = TodoForm({scope: scope, model: 'taskInput'});
                 React.renderComponent(
-                    form, elem[0]
+                    TodoForm({scope: scope}), elem[0]
                 );
             }
         };
