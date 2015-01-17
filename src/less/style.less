@@ -1,0 +1,125 @@
+@accent-color: #F44336;
+@divider-color: lighten(#B6B6B6, 15%);
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3.2em;
+  text-align: center;
+  color: @accent-color;
+}
+
+#wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+#task-form {
+  padding: 1em 0;
+
+  input {
+    font-size: 1.2em;
+    padding: .5em 1em;
+    border: none;
+    border-bottom: 2px solid #CCC;
+    width: 100%;
+    transition: all 200ms ease;
+
+    &:hover, &:focus {
+      border-bottom-color: @accent-color;
+    }
+  }
+}
+
+ul#task-list {
+  list-style: none;
+  padding: 1em 0;
+  margin: 0;
+
+  li {
+    display: block;
+    border-bottom: 1px solid @divider-color;
+    padding: 1em 1.5em 1em 1em;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span.title {
+      width: 55%;
+
+      input {
+        padding: .5em;
+        font-size: 1.2em;
+        border: none;
+        border-bottom: 2px solid transparent;
+        width: 93%;
+        transition: all 200ms ease;
+
+        &:hover, &:focus {
+          border-bottom-color: @accent-color;
+        }
+      }
+    }
+
+    span.time {
+      width: 25%;
+      font-size: .8em;
+      color: #727272;
+    }
+
+    span.actions {
+      width: 15%;
+      text-align: right;
+
+      button {
+        background: transparent;
+        border: 1px solid #DDD;
+        padding: .4em .8em;
+        font-size: .9em;
+        border-radius: 4px;
+        color: #AAA;
+        transition: all 300ms linear;
+
+        &:hover, &:active {
+          border-color: @accent-color;
+          color: @accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  #task-form {
+    margin: 0 1em;
+  }
+}
+
+@media all and (max-width: 500px) {
+  ul#task-list li {
+    span.time {
+      display: none;
+    }
+
+    span.title {
+      width: 78%;
+    }
+
+    span.actions {
+      width: 20%;
+    }
+  }
+}
