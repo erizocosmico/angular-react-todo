@@ -15,7 +15,8 @@
 
     <title>TODO list</title>
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script src="js/vendor.min.js"></script>
     <script src="js/views.min.js"></script>
     <script src="js/app.min.js"></script>
@@ -27,7 +28,7 @@
 <![endif]-->
 <div id="wrap" data-ng-controller="TodoCtrl">
     <h1>Tasks</h1>
-    <todo-form data-ng-model="taskInput"></todo-form>
+    <todo-form></todo-form>
     <todo-list data-tasks="tasks"></todo-list>
 </div>
 </body>
