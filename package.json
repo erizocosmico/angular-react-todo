@@ -1,0 +1,33 @@
+{
+    "name": "angular-react-todo",
+    "version": "1.0.0",
+    "description": "Example ToDo list application with Angular and React.js.",
+    "main": "Gulpfile.js",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mvader/angular-react-todo"
+    },
+    "keywords": [
+        "angular",
+        "react",
+        "todo"
+    ],
+    "author": "José M. Molina <hi@mvader.me>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mvader/angular-react-todo/issues"
+    },
+    "homepage": "https://github.com/mvader/angular-react-todo",
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-react": "latest",
+        "gulp-less" : "latest",
+        "gulp-minify-css" : "latest",
+        "gulp-concat" : "latest",
+        "gulp-uglify" : "latest",
+        "gulp-esnext" : "latest"
+    }
+}

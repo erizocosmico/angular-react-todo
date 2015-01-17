@@ -1,0 +1,31 @@
+{
+    "name": "angular-react-todo",
+    "version": "1.0.0",
+    "authors": [
+        "José Miguel Molina <hi@mvader.me>"
+    ],
+    "description": "Example ToDo list application with Angular and React.js.",
+    "main": "src/index.html",
+    "moduleType": [
+        "es6"
+    ],
+    "keywords": [
+        "todo",
+        "react",
+        "angular"
+    ],
+    "license": "MIT",
+    "homepage": "http://github.com/mvader/angular-react-todo",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "1.3.*",
+        "react": "0.12.*"
+    }
+}
