@@ -1,4 +1,4 @@
-(function (window, angular) {
+(function (window, angular, React) {
     'use strict';
 
     /**
@@ -113,4 +113,4 @@
         };
     });
 
-}(window, angular));
+}(window, angular, React));
